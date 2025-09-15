@@ -26,7 +26,7 @@ const Home = () => {
 
 //function for deletion
 let deleteBlog=(id)=>{
-  axiosInstance.delete('/api/blog/delete/'+id)
+  axiosInstance.delete('/blog/delete/'+id)
   // axiosInstance.delete('http://localhost:5000/blog/delete/'+id)
     .then((res)=>{
       window.location.reload()

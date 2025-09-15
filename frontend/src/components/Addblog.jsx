@@ -31,7 +31,7 @@ let location=useLocation()
    
     if(location.state!=null){
       // axiosInstance.put('http://localhost:5000/blog/update/'+location.state.blog._id,form)
-      axiosInstance.put('/api/blog/update/'+location.state.blog._id,form)
+      axiosInstance.put('/blog/update/'+location.state.blog._id,form)
       .then((res)=>{
         alert("Blog Updated")
         navigate('/')
@@ -42,7 +42,7 @@ let location=useLocation()
       })
     }else{
        e.preventDefault()
-      axiosInstance.post('/api/blog/add',form)
+      axiosInstance.post('/blog/add',form)
       // axiosInstance.post('http://localhost:5000/blog/add',form)
     .then((res)=>{
       console.log("new blog added",form)
